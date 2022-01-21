@@ -1,0 +1,11 @@
+{
+	"files.exclude": {
+		"C:/SimpleShooter/.vscode": true,
+		"C:/SimpleShooter/Content": true,
+		"C:/SimpleShooter/DerivedDataCache": true,
+		"C:/SimpleShooter/Documentation": true,
+		"C:/SimpleShooter/Intermediate": true,
+		"C:/SimpleShooter/Saved": true
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
