@@ -27,8 +27,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere)
-	float Health = 100;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -43,6 +41,8 @@ public:
 
 	UFUNCTION(BlueprintPure) //BlueprintPure removes the need for an execution pin in blueprints.
 	float GetHealthPercent() const;
+
+    void UpdateHealth(float HealthChange);
 
 	UFUNCTION(BlueprintPure) //BlueprintPure removes the need for an execution pin in blueprints.
 	AGun* GetCurrentWeapon() const;
@@ -67,8 +67,6 @@ public:
 
 	void SpawnLoot();
 
-	// float* GetHealth(); //For HealthBox.cpp
-	float GetHealth(); //For HealthBox.cpp
 
 	UPROPERTY()
 	TArray<AGun*> Weapons;
@@ -93,11 +91,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	float RotationRate = 10;
 
+	UPROPERTY(VisibleAnywhere)
+	float Health = 100;
+
 	UPROPERTY(EditDefaultsOnly)
 	float MaxHealth = 100;
-
-	// UPROPERTY(VisibleAnywhere)
-	// float Health;
 
 	void MoveForwardBackward(float AxisValue);
 

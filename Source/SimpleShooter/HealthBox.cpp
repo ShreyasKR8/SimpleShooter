@@ -49,7 +49,7 @@ void AHealthBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 
 void AHealthBox::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) 
 {
-
+    
 }
 
 void AHealthBox::AddHealth() 
@@ -61,12 +61,12 @@ void AHealthBox::AddHealth()
 		return;
 	}
 	
-	UE_LOG(LogTemp, Warning, TEXT("Health = %f"), PlayerCharacter->Health)
-	if(PlayerCharacter->Health <= 250)
+	// UE_LOG(LogTemp, Warning, TEXT("Health = %f"), PlayerCharacter->GetHealthPercent())
+	if(PlayerCharacter->GetHealthPercent() < 1.0f)
 	{
-		PlayerCharacter->Health += HealingFactor;
-		HealingFactor = 0;
-		UE_LOG(LogTemp, Warning, TEXT("Health Added"))
+		// PlayerCharacter->Health += HealingFactor;
+		// HealingFactor = 0;
+        PlayerCharacter->UpdateHealth(AddHP);
 	}
 
 	Destroy();

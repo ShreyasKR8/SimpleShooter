@@ -17,7 +17,10 @@ class SIMPLESHOOTER_API AShooterAIController : public AAIController
     GENERATED_BODY()
 
 public:
+    AShooterAIController();
+
     virtual void Tick(float DeltaSeconds) override;
+
     bool IsDead() const;
 
 protected:

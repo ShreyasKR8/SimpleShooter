@@ -39,7 +39,7 @@ public:
 private:
 
 	UPROPERTY(EditDefaultsOnly)
-	float HealingFactor = 50;
+	float AddHP = 100;
 
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* StaticMesh;

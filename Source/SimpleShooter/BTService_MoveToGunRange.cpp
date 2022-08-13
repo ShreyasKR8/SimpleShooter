@@ -28,6 +28,7 @@ void UBTService_MoveToGunRange::TickNode(UBehaviorTreeComponent& OwnerComp, uint
         UE_LOG(LogTemp, Warning, TEXT("Null pointer in BTService_MoveToGunRange.cpp"))
         return;
     }
+    
     float Distance = (PlayerCharacter->GetActorLocation() - AICharacter->GetActorLocation()).Size();
     UE_LOG(LogTemp, Warning, TEXT("Distance = %f"), Distance)
     if(Distance > Gun->GetMaxRange())

@@ -190,7 +190,7 @@ void AMyCharacter::SpawnLoot()
 	AActor* LootMeshRef = GetWorld()->SpawnActor<AActor>(LootMesh, this->GetActorLocation(), this->GetActorRotation(), SpawnParam);
 }
 
-float AMyCharacter::GetHealth() 
+void AMyCharacter::UpdateHealth(float HealthChange)
 {
-	return Health;
+    Health = FMath::Clamp(Health += HealthChange, 0.0f, MaxHealth);
 }

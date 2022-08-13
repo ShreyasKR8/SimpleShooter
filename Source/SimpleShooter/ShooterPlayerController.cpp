@@ -33,8 +33,9 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
     bShowMouseCursor = false;
     if(bIsWinner)
     {
+        //Make the WinScreen appear after 0.8 secs
         GetWorld()->GetTimerManager().SetTimer(WLTimerHandle, [&]()
-        {
+        { 
             UUserWidget* WinScreen = CreateWidget(this, WinScreenClass);
             if(WinScreen != nullptr)
             {
@@ -50,6 +51,7 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
     }
     else
     {
+        //Make the LoseScreen appear after 0.8 secs
         GetWorld()->GetTimerManager().SetTimer(WLTimerHandle, [&]()
         {
             UUserWidget* LoseScreen = CreateWidget(this, LoseScreenClass);

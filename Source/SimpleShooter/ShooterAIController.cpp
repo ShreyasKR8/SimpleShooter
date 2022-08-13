@@ -6,6 +6,14 @@
 #include "MyCharacter.h"
 #include "AmmoBox.h"
 
+AShooterAIController::AShooterAIController()
+{
+    // PerceptionComp = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception Component")); 
+    //https://forums.unrealengine.com/t/quick-ai-perception-jumpstart-c/27452
+    // SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("AISight Config"));
+    // PerceptionComp->ConfigureSense(*SightConfig); //void ConfigureSense(UAISenseConfig& SenseConfig);
+}
+
 void AShooterAIController::BeginPlay() 
 {
     Super::BeginPlay();
@@ -31,3 +39,4 @@ bool AShooterAIController::IsDead() const
     }
     return true;//If controller doesn't exist, it's obviously dead.
 }
+
