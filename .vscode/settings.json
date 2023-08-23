@@ -1,11 +1,12 @@
 {
 	"files.exclude": {
-		"C:/SimpleShooter/.vscode": true,
-		"C:/SimpleShooter/Content": true,
-		"C:/SimpleShooter/DerivedDataCache": true,
-		"C:/SimpleShooter/Documentation": true,
-		"C:/SimpleShooter/Intermediate": true,
-		"C:/SimpleShooter/Saved": true
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/.git": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/.vscode": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/Content": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/DerivedDataCache": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/Documentation": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/Intermediate": true,
+		"D:/Unreal Engine 4/1.UE4 projects/SimpleShooter/Saved": true
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "disabled"
 }

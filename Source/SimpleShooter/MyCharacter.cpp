@@ -94,7 +94,6 @@ float AMyCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& Da
 
 	if (IsDead())
 	{
-		// Kills++;
 		UE_LOG(LogTemp, Warning, TEXT("Killed"))
 		ASimpleShooterGameModeBase* GameMode = GetWorld()->GetAuthGameMode<ASimpleShooterGameModeBase>();
 		if(GameMode != nullptr)
@@ -104,7 +103,8 @@ float AMyCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& Da
 		DetachFromControllerPendingDestroy();
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-		GetWorldTimerManager().SetTimer(TimerHandle, [&](){
+        /*To Spawn loot after death*/
+		GetWorldTimerManager().SetTimer(TimerHandle, [&](){ 
 			SpawnLoot();
 		}, 0.5, false);
 	}
